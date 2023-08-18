@@ -36,7 +36,7 @@ export class BooksService {
             if (index === -1) {
                 throw new HttpException('Book does not exist!', 404);
             }
-            this.books.splice(1, index);
+            this.books.splice(index, 1);
             resolve(this.books);
         });
     }
